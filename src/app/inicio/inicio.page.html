@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <img src="assets/img/duoc.png" style="height: auto; max-width: 23vh;" />
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ingreso"></ion-back-button>
+    </ion-buttons>
+   
+
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header class="ion-text-center" id="container" *ngIf="usuario">
+      <ion-card-subtitle>¡Bienvenido a RegistrAPP, {{usuario.nombre}}!</ion-card-subtitle>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      <ion-grid >
+        <ion-row>
+          <ion-col size="4">
+            <ion-img [src]="usuario.foto"></ion-img>
+          </ion-col>
+          <ion-col size="8">
+            <ion-text color="dark">
+              <strong class="ion-text-center">Datos Personales</strong>
+              <h4>Nombre  : {{usuario.nombre}}</h4>
+              <h4>Carrera : {{usuario.carrera}}</h4>
+              <h4>Sede    : {{usuario.sede}}</h4>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="color:darkblue;">Registro de Asistencia</ion-card-title><br>
+      <ion-card-subtitle>{{usuario.nombre}}, aqui podrás visualizar tu registro de asistencia.</ion-card-subtitle><br>
+      
+
+      
+    </ion-card-header>
+    
+  </ion-card>
+    <img src="assets/img/asistencia.PNG" style="height: auto; max-width: 300;"/>
+  
+</ion-content>
